@@ -1,0 +1,72 @@
+@import "/src/utils/colors.scss";
+
+$scroll-reveal-transition: 1s;
+
+.why_us_section {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+
+  // For Reveal on scroll
+  overflow: hidden; //Y-axis is also hidden because pic goes out out parent
+}
+
+.details {
+  width: 50%;
+  height: 100%;
+  padding-top: 50px;
+  color: $secondary-text-color;
+  transition: transform $scroll-reveal-transition;
+}
+
+.pic {
+  width: auto;
+  height: 400px;
+  object-fit: cover;
+
+  transition: transform $scroll-reveal-transition;
+}
+
+.details .section_title {
+  color: $primary-text-color;
+  font-size: 14px;
+  font-family: "Rye", cursive;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.details .title {
+  font-size: 18px;
+  font-family: "Rye", cursive;
+  margin-bottom: 25px;
+}
+
+.details .description {
+  font-family: "roboto";
+  line-height: 24px;
+}
+
+.details .call_to_action_but {
+  user-select: none;
+  cursor: pointer;
+  margin: 50px 0px;
+  padding: 15px 10px;
+  width: fit-content;
+  background-color: $primary-button-color;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@import "./{styles}/WhyUsSection.768mx.module.scss";
+@import "./{styles}/WhyUsSection.768mn.module.scss";
+@import "./{styles}/WhyUsSection.1200mn.module.scss";
+
+/**
+* Temp styles
+*/
+.slide_in {
+  transform: translateX(0);
+}

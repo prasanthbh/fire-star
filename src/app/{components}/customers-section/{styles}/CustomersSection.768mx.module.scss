@@ -1,0 +1,34 @@
+@media only screen and (max-width: 768px) {
+  .customers_section {
+    --section-x-padding: 30px;
+    align-items: center;
+  }
+
+  .reviews_container {
+    width: fit-content;
+    display: block;
+  }
+
+  .review_card {
+    width: 400px;
+    height: 250px;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .quote_icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+  .review {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .name {
+    display: initial;
+    margin-top: 30px;
+  }
+}

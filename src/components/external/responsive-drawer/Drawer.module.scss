@@ -1,0 +1,51 @@
+$transition-duration: 0.5s;
+
+/* Page section stylining */
+#pages-section {
+  background-color: white;
+  left: var(--drawer-width);
+  // width: calc(100% - var(--drawer-width));
+
+  height: 100vh;
+  /**
+   * without `fixed` left will not work
+   * If `absolute` or `relative` is used width shold be removed or else it will take 100vw px
+   */
+  position: fixed;
+
+  /* If its content goes out of `vh` `overfloy-y` becomes `scroll` else `initial`. used auto because at `initial` scroll bar won't show */
+  overflow-y: auto;
+
+  transition: left $transition-duration;
+}
+
+/**
+Portal stylings
+*/
+
+#drawer-section {
+  width: var(--drawer-width);
+  transform: translateX(0);
+  height: 100vh;
+  background-color: white;
+  border-right: var(--drawer-border-width) solid var(--drawer-border-color);
+  position: absolute;
+
+  /* If its content goes out of `vh` `overfloy-y` becomes `scroll` else `initial`. used auto because at `initial` scroll bar won't show */
+  overflow-y: auto;
+  z-index: 101;
+
+  transition: transform $transition-duration;
+}
+
+#overlay {
+  position: absolute; /*Goes above of its sublings in it's parent*/
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden; // initially it's hidden
+  opacity: 0.5;
+  background-color: transparent;
+  z-index: 100; /* It sjould be below drawer & above pages content*/
+
+  transition: visibility 0.4s, background-color 0.4s;
+}

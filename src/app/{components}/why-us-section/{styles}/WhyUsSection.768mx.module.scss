@@ -1,0 +1,15 @@
+@media only screen and (max-width: 768px) {
+  // <768px
+  .why_us_section {
+    padding: 0px 30px;
+  }
+
+  .pic {
+    display: none; // Hiding the pic
+  }
+
+  .details {
+    width: 100%;
+    transform: translateX(-200%);
+  }
+}

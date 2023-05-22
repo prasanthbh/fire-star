@@ -13,7 +13,7 @@ export default function _Drawer(props: _ResponsiveDrawerProps) {
    * Variables
    */
   //--------------------------Related to document, window etc ----------------------------------
-  let portalTargetNode;
+  let portalTargetNode: HTMLElement;
   let windowWidth = 0;
   try {
     //Indicating the location of drawer portal

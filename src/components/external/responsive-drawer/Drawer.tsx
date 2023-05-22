@@ -12,20 +12,27 @@ export default function _Drawer(props: _ResponsiveDrawerProps) {
   /**
    * Variables
    */
+  //--------------------------Related to document, window etc ----------------------------------
+  let portalTargetNode;
+  let windowWidth = 0;
+  try {
+    //Indicating the location of drawer portal
+    portalTargetNode = document.getElementById("pb93-externals")!!;
+    windowWidth = window.innerWidth;
+  } catch {}
+  //--------------------------------------------------------------------------------------------
   const dispatch = useDispatch();
   const isDrawerOpened = useSelector(
     (state: ResponsiveDrawerStateType) => state.isDrawerOpened
   );
   const [isComponentLoaded, setIsComponentLoaded] = useState(false);
-  //Indicating the location of drawer portal
-  const portalTargetNode = document.getElementById("pb93-externals")!!;
   //
   //Styles
   //
   let drawerInitStyle: CSSProperties = {};
   let pagesInitStyle: CSSProperties = {};
   // Setting responsive styles
-  if (!isBreakpointExceeded(window.innerWidth) || !props.isResponsive) {
+  if (!isBreakpointExceeded(windowWidth) || !props.isResponsive) {
     // if not in desktop mode or isResponsive set to false
     drawerInitStyle = {
       transform: "translateX(-100%)",
@@ -38,7 +45,7 @@ export default function _Drawer(props: _ResponsiveDrawerProps) {
   const [pagesStyle, setPagesStyle] = useState<CSSProperties>(pagesInitStyle);
   const [overlayStyle, setOverlayStyle] = useState<CSSProperties>({});
 
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportWidth, setViewportWidth] = useState(windowWidth);
 
   /**
    * Functions
@@ -194,7 +201,7 @@ export default function _Drawer(props: _ResponsiveDrawerProps) {
                 }}
               />
             </div>,
-            portalTargetNode
+            portalTargetNode!!
           )
       }
       <section id={styles["pages-section"]} style={pagesStyle}>

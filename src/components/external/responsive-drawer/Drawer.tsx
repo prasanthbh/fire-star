@@ -12,7 +12,7 @@ export default function _Drawer(props: _ResponsiveDrawerProps) {
   /**
    * Variables
    */
-  //--------------------------Related to document, window etc ----------------------------------
+  //-------------------------- Related to document, window etc in server side ----------------------------------
   let portalTargetNode: HTMLElement;
   let windowWidth = 0;
   try {

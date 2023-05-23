@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import heroVid from "assets/videos/hero-vid.mp4";
 import iconImg from "assets/icons/fire.png";
@@ -21,7 +21,6 @@ export default function RootPage() {
   let isDrawerBreakpointExceeded = useSelector(
     (state: ResponsiveDrawerStateType) => state.isBreakpointExceeded
   );
-
   /**
    * JSX
    */
@@ -59,7 +58,12 @@ export default function RootPage() {
         <div className={styles.hero_fg_layer}>
           <div className={styles.hero_top_section}>
             <div className={styles.brand_section}>
-              <Image className={styles.icon} src={iconImg} alt="Brand Icon" />
+              <Image
+                className={styles.icon}
+                src={iconImg}
+                alt="Brand Icon"
+                placeholder="blur"
+              />
               <p className={styles.name}>FIRE STAR</p>
             </div>
             <CiMenuFries

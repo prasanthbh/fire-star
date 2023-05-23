@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import styles from "./ServicesSection.module.scss";
@@ -48,6 +48,7 @@ export default function ServicesSection() {
    * **************************  Hooks  *******************************
    */
   //----------------------------------------------------------------
+
   useEffect(() => {
     /**
      * Will only ran on first component mount & unmount
@@ -143,6 +144,7 @@ export default function ServicesSection() {
               src={service.icon}
               alt="service-icon"
               className={styles.service_icon}
+              placeholder="blur"
             />
             <p className={styles.service_title}>{service.service_title}</p>
             <p className={styles.service_description}>{service.description}</p>

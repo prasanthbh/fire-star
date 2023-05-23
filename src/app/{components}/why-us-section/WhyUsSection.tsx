@@ -20,6 +20,7 @@ export default function WhyUsSection() {
    * **************************  Hooks  *******************************
    */
   //----------------------------------------------------------------
+
   useEffect(() => {
     /**
      * Will only ran on first component mount & unmount
@@ -90,6 +91,8 @@ export default function WhyUsSection() {
         src={whyUsImg}
         alt="why us girl"
         ref={picRef}
+        placeholder="blur"
+        loading="eager"
       />
     </div>
   );

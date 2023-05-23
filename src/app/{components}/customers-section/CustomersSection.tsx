@@ -114,6 +114,7 @@ export default function CustomersSection() {
             <Image
               src={review.customer_pic}
               alt="customers"
+              placeholder="blur"
               className={styles.bg_image}
             />
             <div className={styles.overlay} />
@@ -121,6 +122,7 @@ export default function CustomersSection() {
               <Image
                 src={review.icon}
                 alt="service-icon"
+                placeholder="blur"
                 className={styles.quote_icon}
               />
               <p className={styles.review}>{review.description}</p>

@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { TfiClose } from "react-icons/tfi";
 import { responsiveDrawerActions } from "components/external/responsive-drawer/store";

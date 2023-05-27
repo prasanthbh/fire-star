@@ -1,0 +1,87 @@
+.shots_section {
+  width: 100vw;
+  height: fit-content;
+  color: white;
+  margin-bottom: 100px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Rye", cursive;
+  margin-bottom: 40px;
+}
+
+.pics_container {
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(
+    12,
+    1fr
+  ); // repeats 1fr for 12 times | divides the container width into 12 columns of equal width
+  grid-template-rows: repeat(
+    12,
+    1fr
+  ); // divides the container height into 12 rows of equal height
+  grid-gap: 5px; // gap between each grids
+}
+
+.pics_container div {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pics_container div img {
+  width: 100%;
+  height: inherit; // same as parent div
+  object-fit: cover;
+  object-position: right; // positiones the image from it's right side
+  transition: transform 0.5s;
+}
+
+.pics_container *:nth-child(1) {
+  grid-column: 1 / span 6; //starts at 1 and spans for 6 columns. start:1, end: 7 (1+6)
+  grid-row: 1 / span 7;
+}
+
+.pics_container *:nth-child(2) {
+  grid-column: 1 / span 3;
+  grid-row: 8 / span 5;
+}
+
+.pics_container *:nth-child(3) {
+  grid-column: 4 / span 3;
+  grid-row: 8 / span 5;
+}
+
+.pics_container *:nth-child(4) {
+  grid-column: 7 / span 3;
+  grid-row: 1 / span 5;
+}
+.pics_container *:nth-child(5) {
+  grid-column: 10 / span 3;
+  grid-row: 1 / span 5;
+}
+.pics_container *:nth-child(6) {
+  grid-column: 7 / span 6;
+  grid-row: 6 / span 7;
+}
+
+.reveal {
+  opacity: 1;
+}
+
+/*
+----------------------------------------------- Hover & other pseudos -------------------------------------------------
+*/
+/* To prevent Hovering effects on click in Mobile / Touch enabled devices*/
+@media (hover: hover) {
+  .pics_container div img:hover {
+    transform: scale(1.1);
+  }
+}
+
+@import "./{styles}/ShotsSection.768mx.module.scss";

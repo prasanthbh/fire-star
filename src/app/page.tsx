@@ -14,6 +14,8 @@ import WhyUsSection from "./{components}/why-us-section/WhyUsSection";
 import ServicesSection from "./{components}/services-section/ServicesSection";
 import CustomersSection from "./{components}/customers-section/CustomersSection";
 import Image from "next/image";
+import ShotsSection from "./{components}/shots-section/ShotsSection";
+import FooterSection from "./{components}/footer-section/FooterSection";
 
 export default function RootPage() {
   // Variables
@@ -116,6 +118,16 @@ export default function RootPage() {
        * *************** Part 4 : Customers section  ****************************************
        */}
       <CustomersSection />
+
+      {/**
+       * *************** Part 5 : Shots Section *********************************************
+       */}
+      <ShotsSection />
+
+      {/**
+       * *************** Part 6 : Footer Section *********************************************
+       */}
+      <FooterSection />
     </div>
   );
 }

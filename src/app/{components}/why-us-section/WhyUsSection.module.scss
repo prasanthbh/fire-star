@@ -30,20 +30,24 @@ $scroll-reveal-transition: 1s;
 
 .details .section_title {
   color: $primary-text-color;
-  font-size: 14px;
-  font-family: "Rye", cursive;
+  font-size: 20px;
+  font-family: "Rajdhani", cursive;
   text-transform: uppercase;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .details .title {
-  font-size: 18px;
-  font-family: "Rye", cursive;
-  margin-bottom: 25px;
+  font-size: 22px;
+  font-family: "Rajdhani", cursive;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .details .description {
-  font-family: "roboto";
+  font-family: "Rajdhani";
+  font-size: large;
+  letter-spacing: 1px;
   line-height: 24px;
 }
 
@@ -58,6 +62,7 @@ $scroll-reveal-transition: 1s;
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
+  transition: transform 0.5s, background-color 0.5s;
 }
 
 @import "./{styles}/WhyUsSection.768mx.module.scss";
@@ -65,8 +70,20 @@ $scroll-reveal-transition: 1s;
 @import "./{styles}/WhyUsSection.1200mn.module.scss";
 
 /**
-* Temp styles
+* ------------------------------------------------  Temp styles  ---------------------------------------------------
 */
 .slide_in {
   transform: translateX(0);
+}
+
+/**
+* ------------------------------------------------  Pseudo Classes & selectors  ------------------------------------------
+*/
+/* To prevent Hovering effects on click in Mobile / Touch enabled devices*/
+@media (hover: hover) {
+  .call_to_action_but:hover {
+    // padding: 25px 20px;
+    transform: scale(1.1);
+    background-color: rgb(215, 57, 0);
+  }
 }

@@ -42,7 +42,7 @@ export default function FooterSection() {
               />
             ))}
           </div>
-          <p className={styles.footer_title}>© 2020 RANDOM RESTAURANT</p>
+          <p className={styles.footer_title}>© 2021 RANDOM RESTAURANT</p>
           <p className={styles.footer_subtitle}>
             DEVELOPED BY Prasanth Bheemarasetty
           </p>

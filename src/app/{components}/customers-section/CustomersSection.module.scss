@@ -14,10 +14,10 @@
 }
 
 .title {
+  font-size: 22px;
+  font-family: "Rajdhani", cursive;
+  font-weight: bold;
   text-align: center;
-  font-size: 18px;
-  font-family: "Rye", cursive;
-  margin-bottom: 40px;
 }
 
 .reviews_container {
@@ -32,10 +32,10 @@
   height: 300px;
   background-color: $secondary-button-color;
   padding: 20px;
-  opacity: 0; // For reveal on scroll
   position: relative;
-
-  transition: opacity 1s; // For reveal on scroll
+  margin-top: 30px; // For hovering effect
+  opacity: 0; // For reveal on scroll
+  transition: opacity 1s, margin 0.5s; // For reveal on scroll
 }
 
 .bg_image {
@@ -82,6 +82,7 @@
   font-style: italic;
   line-height: 20px;
   text-align: center;
+  word-spacing: 2px;
 }
 
 .name {
@@ -89,13 +90,26 @@
   font-size: 22px;
   margin-top: 10px;
   text-align: end;
+  font-family: "Rajdhani", cursive;
 }
 
 @import "./{styles}/CustomersSection.1024mx.module.scss";
 @import "./{styles}/CustomersSection.768mx.module.scss";
 @import "./{styles}/CustomersSection.500mx.module.scss";
 
-// Temp class
+/*
+ * --------------------------  Temp class  ------------------------------------------------------------
+ */
 .reveal {
   opacity: 1;
+}
+
+/*
+ * -------------------------  Pseudo classes & selectors  -----------------------------------------------
+ */
+/* To prevent Hovering effects on click in Mobile / Touch enabled devices*/
+@media (hover: hover) {
+  .review_card:hover {
+    margin-top: 20px;
+  }
 }

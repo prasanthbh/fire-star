@@ -35,17 +35,23 @@
 .menu_name {
   color: $tertiary-text-color;
   font-size: 30px;
-  font-family: "Sirin Stencil", cursive;
-  //   font-weight: bold;
+  font-family: "Rajdhani", cursive;
+  font-weight: bold;
   text-transform: uppercase;
-}
-
-.menu_name:hover {
-  font-size: 40px;
 }
 
 /*
 Then only styling will get applied for (max-width : 500px)
 else normal styling will take high priority even below 500px
 */
-@import "./MainDrawerBody.mx500.module.scss";
+@import "./{styles}/MainDrawerBody.mx500.module.scss";
+
+/*
+* ------------------------------------------------  Pseudo Classes & selectors  ------------------------------------------
+*/
+/* To prevent Hovering effects on click in Mobile / Touch enabled devices*/
+@media (hover: hover) {
+  .menu_name:hover {
+    font-size: 40px;
+  }
+}

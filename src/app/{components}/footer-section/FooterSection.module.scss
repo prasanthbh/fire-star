@@ -35,11 +35,12 @@
 }
 
 .stay_updated_section .title {
-  font-size: 1.3rem;
-  font-family: "rye", cursive;
+  font-size: 1.5rem;
+  font-family: "Rajdhani", cursive;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .stay_updated_section .email,
@@ -60,6 +61,7 @@
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 50px;
+  font-family: sans-serif;
 }
 
 .social_icons {
@@ -69,12 +71,32 @@
   margin-bottom: 70px;
 }
 
+.social_icons img {
+  user-select: none;
+  cursor: pointer;
+}
+
 .footer_subtitle,
 .footer_title {
-  font-size: small;
+  font-size: medium;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
+  font-family: Rajdhani;
 }
 
 @import "{styles}/FooterSection.module.500mx.scss";
+
+/*
+* ------------------------------------------------  Pseudo Classes & selectors  ------------------------------------------
+*/
+.submit_button:active {
+  background-color: #2e4053;
+}
+
+/* To prevent Hovering effects on click in Mobile / Touch enabled devices*/
+@media (hover: hover) {
+  .social_icons img:hover {
+    transform: scale(1.1);
+  }
+}

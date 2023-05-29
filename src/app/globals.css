@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap");
-/* font-family: 'Sirin Stencil', cursive; */
-
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 /* font-family: 'Rye', cursive; */
 
-*{
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+/* font-family: 'Rajdhani', sans-serif; */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

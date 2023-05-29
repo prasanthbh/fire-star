@@ -87,7 +87,9 @@
   color: $secondary-text-color;
   text-decoration: none;
   margin: 0px 20px;
-  font-family: "Rye", cursive;
+  font-family: "Rajdhani", cursive;
+  font-weight: bold;
+  font-size: 1.2rem;
   transition: border-bottom 0.5s;
 }
 
@@ -100,17 +102,19 @@
   align-items: center;
   justify-content: center;
   top: 30%;
+  padding: 0 10px;
 }
 
 .hero_text_block .title {
-  font-family: "Sirin Stencil", cursive;
+  font-family: "Rajdhani", cursive;
   font-size: 5rem;
+  font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
 }
 
 .hero_text_block .sub_title {
-  font-family: "Sirin Stencil", cursive;
+  font-family: "Rajdhani", cursive;
   font-size: larger;
   text-align: center;
 }
@@ -122,8 +126,9 @@
   padding: 20px 15px;
   background-color: $primary-button-color;
   font-family: sans-serif;
-  transition: background-color 0.5s, padding 0.5s;
+  transition: background-color 0.5s, transform 0.5s;
 }
+
 /*
 ----------------------------------------------- Hover & other pseudos -------------------------------------------------
 */
@@ -136,9 +141,26 @@
   }
 
   .hero_text_block .call_to_action_but:hover {
-    padding: 25px 20px;
+    // padding: 25px 20px;
+    transform: scale(1.1);
     background-color: rgb(215, 57, 0);
   }
+}
+
+// To prevent displaying play button on video tag in Safari/Iphone devices
+.hero_bg_vid::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.hero_bg_vid::--webkit-media-controls-play-button {
+  display: none !important;
+  appearance: none;
+}
+
+.hero_bg_vid::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 
 @import "./{styles}/page.825mx.module.scss";

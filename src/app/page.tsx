@@ -18,11 +18,14 @@ import ShotsSection from "./{components}/shots-section/ShotsSection";
 import FooterSection from "./{components}/footer-section/FooterSection";
 
 export default function RootPage() {
-  // Variables
+  /*
+   * Variables
+   */
   const dispatch = useDispatch();
   let isDrawerBreakpointExceeded = useSelector(
     (state: ResponsiveDrawerStateType) => state.isBreakpointExceeded
   );
+
   /**
    * JSX
    */
@@ -36,7 +39,6 @@ export default function RootPage() {
          * Background Layer
          */}
         <div className={styles.hero_bg_layer}>
-          {/* <img className={styles["hero_img"]} src={heroImg} alt="main_pic" /> */}
           {/**
            * BG Video
            */}

@@ -79,7 +79,11 @@ export default function ShotsSection() {
       <div className={styles.pics_container}>
         {imgsList.map((img, key) => (
           <div key={img.id}>
-            <Image src={img.src} alt={`Pic ${key.toString()}`} />
+            <Image
+              src={img.src}
+              alt={`Pic ${key.toString()}`}
+              placeholder="blur"
+            />
           </div>
         ))}
       </div>

@@ -21,7 +21,12 @@ export default function FooterSection() {
   return (
     <div className={styles.footer_section}>
       <div className={styles.stay_updated_section}>
-        <Image src={bgImg} alt="bg image" className={styles.bg_img} />
+        <Image
+          src={bgImg}
+          alt="bg image"
+          className={styles.bg_img}
+          placeholder="blur"
+        />
         <div className={styles.bg_overlay} />
         <div className={styles.content}>
           <p className={styles.title}>Stay Updated with Details</p>
